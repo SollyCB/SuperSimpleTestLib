@@ -1,0 +1,1 @@
+/usr/bin/c++ -g -rdynamic CMakeFiles/exe.dir/main.cpp.o CMakeFiles/exe.dir/thing.cpp.o -o exe 

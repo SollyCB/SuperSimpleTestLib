@@ -1,0 +1,4 @@
+/home/solly/code/cpp/suite-of-tests/build/CMakeFiles/exe.dir
+/home/solly/code/cpp/suite-of-tests/build/CMakeFiles/test_all.dir
+/home/solly/code/cpp/suite-of-tests/build/CMakeFiles/edit_cache.dir
+/home/solly/code/cpp/suite-of-tests/build/CMakeFiles/rebuild_cache.dir

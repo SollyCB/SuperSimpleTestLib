@@ -1,0 +1,27 @@
+[
+{
+  "directory": "/home/solly/code/cpp/suite-of-tests/build",
+  "command": "/usr/bin/c++ -DTESTS -I/home/solly/code/cpp/suite-of-tests/build -g -std=c++17 -ggdb -std=gnu++17 -o CMakeFiles/exe.dir/main.cpp.o -c /home/solly/code/cpp/suite-of-tests/main.cpp",
+  "file": "/home/solly/code/cpp/suite-of-tests/main.cpp"
+},
+{
+  "directory": "/home/solly/code/cpp/suite-of-tests/build",
+  "command": "/usr/bin/c++ -DTESTS -I/home/solly/code/cpp/suite-of-tests/build -g -std=c++17 -ggdb -std=gnu++17 -o CMakeFiles/exe.dir/thing.cpp.o -c /home/solly/code/cpp/suite-of-tests/thing.cpp",
+  "file": "/home/solly/code/cpp/suite-of-tests/thing.cpp"
+},
+{
+  "directory": "/home/solly/code/cpp/suite-of-tests/build",
+  "command": "/usr/bin/c++ -DTESTS  -g -std=gnu++17 -o CMakeFiles/test_all.dir/test.cpp.o -c /home/solly/code/cpp/suite-of-tests/test.cpp",
+  "file": "/home/solly/code/cpp/suite-of-tests/test.cpp"
+},
+{
+  "directory": "/home/solly/code/cpp/suite-of-tests/build",
+  "command": "/usr/bin/c++ -DTESTS  -g -std=gnu++17 -o CMakeFiles/test_all.dir/thing_test.cpp.o -c /home/solly/code/cpp/suite-of-tests/thing_test.cpp",
+  "file": "/home/solly/code/cpp/suite-of-tests/thing_test.cpp"
+},
+{
+  "directory": "/home/solly/code/cpp/suite-of-tests/build",
+  "command": "/usr/bin/c++ -DTESTS  -g -std=gnu++17 -o CMakeFiles/test_all.dir/thing.cpp.o -c /home/solly/code/cpp/suite-of-tests/thing.cpp",
+  "file": "/home/solly/code/cpp/suite-of-tests/thing.cpp"
+}
+]
