@@ -1,4 +1,4 @@
 F = -g
 
 all:
-	g++ $(F) -o bin main.cpp && ./bin
+	cmake . -B build && cmake --build build && ./build/test_all
