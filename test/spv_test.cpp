@@ -40,7 +40,7 @@ namespace Sol {
         test_triangle3(SKIP);
 
         TEST_MODULE_END();
-        TEST_MODULE_BEGIN("SpvTest_2", true, false);
+        TEST_MODULE_BEGIN("SpvTest_2", false, false);
 
         test_triangle3(SKIP);
 
