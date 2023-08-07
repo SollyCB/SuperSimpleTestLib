@@ -1,5 +1,6 @@
 #include "test.hpp"
 #include <cstring>
+#include <iostream>
 namespace Sol::Test {
 
 static void module_skipped_msg() {
@@ -55,7 +56,9 @@ void Suite::kill() {
         }
     }
 
-    if (fail_count == 0) {
+    if (modules.len == 0) {
+        std::cout << YELLOW << "No tests to run...\n";
+    } else if (fail_count == 0) {
         std::cout << GREEN << "    All Tests Passed!\n" << NC;
     } else {
         std::cout << "    " << fail_count << " Modules " << RED << "FAILED!\n" << NC;
