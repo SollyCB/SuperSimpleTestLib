@@ -66,6 +66,42 @@ struct Module {
         ok = false;
         test_fail(test_name, arg1, arg2, arg1_name, arg2_name, "!=", file_name, function_name);
     }
+    template<typename T>
+    void test_neq(const char* test_name, T arg1, T arg2, const char* arg1_name, const char* arg2_name, const char* file_name, const char* function_name, bool skip) {
+        if (skip_module)
+            return;
+
+        test_name = strcmp(test_name, "") == 0 ? "unnamed" : test_name;
+        ++test_index;
+        if (skippable && skip) {
+            test_skipped(test_name);
+            return;
+        } else 
+            skipped = false;
+
+        if (arg1 != arg2)
+            return;
+        ok = false;
+        test_fail(test_name, arg1, arg2, arg1_name, arg2_name, "==", file_name, function_name);
+    }
+    template<typename T>
+    void test_str_eq(const char* test_name, T arg1, T arg2, const char* arg1_name, const char* arg2_name, const char* file_name, const char* function_name, bool skip) {
+        if (skip_module)
+            return;
+
+        test_name = strcmp(test_name, "") == 0 ? "unnamed" : test_name;
+        ++test_index;
+        if (skippable && skip) {
+            test_skipped(test_name);
+            return;
+        } else 
+            skipped = false;
+
+        if (strcmp(arg1, arg2) == 0)
+            return;
+        ok = false;
+        test_fail(test_name, arg1, arg2, arg1_name, arg2_name, "==", file_name, function_name);
+    }
 
 };
 struct List {
@@ -93,3 +129,7 @@ struct Suite {
     Sol::Test::Module::end();
 #define TEST_EQ(test_name, arg1, arg2, skip) \
     Sol::Test::Suite::instance()->modules.last()->test_eq(test_name, arg1, arg2, #arg1, #arg2, __FILE__, __FUNCTION__, skip);
+#define TEST_NEQ(test_name, arg1, arg2, skip) \
+    Sol::Test::Suite::instance()->modules.last()->test_neq(test_name, arg1, arg2, #arg1, #arg2, __FILE__, __FUNCTION__, skip);
+#define TEST_STR_EQ(test_name, arg1, arg2, skip) \
+    Sol::Test::Suite::instance()->modules.last()->test_str_eq(test_name, arg1, arg2, #arg1, #arg2, __FILE__, __FUNCTION__, skip);
